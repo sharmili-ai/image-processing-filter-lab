@@ -1,38 +1,25 @@
 # Image Processing Filter Visualization Lab
 
-An interactive college-level Image Processing laboratory application built with **Python, Streamlit, OpenCV, NumPy, Pandas, and custom CSS**.
-
-## Project Description
-
-The application demonstrates the complete educational workflow:
-
-**Upload Image → Original Image → Grayscale → Pixel Matrix → Select Operator → Kernel/Algorithm → Apply Operator → Processed Output → Pixel-Level Demonstration**
-
-It is designed to show not only the final filtered image but also the underlying image-processing concepts.
+An interactive **Image Processing Filter Visualization Lab** built using **Python, Streamlit, OpenCV, NumPy, and Pandas**. The application allows users to upload an image, convert it to grayscale, inspect pixel values, select image-processing operators, visualize kernels, apply filters, and compare the results.
 
 ## Features
 
-- Upload PNG, JPG, and JPEG images
-- Display original image and image information
-- Convert the image to grayscale
-- Display a configurable pixel matrix (5×5, 10×10, 20×20, 50×50)
-- Select from 11 image-processing operators
-- Display numerical kernels as tables
-- Explain the definition, purpose, working principle, and result of each operator
-- Apply filters without re-uploading the image
-- Before/after comparison
-- Pixel coordinate inspection
-- Step-by-step pixel-level calculation
-- Median sorting demonstration
-- Sobel magnitude calculation
-- Roberts Cross magnitude calculation
-- Canny threshold controls
-- PNG and JPG download
-- Reset/Clear
-- Modern dark educational interface
-- Friendly error handling
+- Upload and preview an input image
+- Convert RGB images to grayscale
+- Display grayscale pixel values as a matrix
+- Inspect individual pixel values
+- Select and apply image-processing operators
+- Visualize the kernel used by an operator
+- Show step-by-step pixel/convolution calculations
+- Compare original and processed images
+- Download processed images
+- Canny edge detection with adjustable thresholds
+- Reset the application
+- Error handling for invalid inputs
 
-## Supported Operators
+## Image Processing Operators
+
+The application demonstrates the following operators:
 
 1. Mean Filter
 2. Gaussian Filter
@@ -46,20 +33,19 @@ It is designed to show not only the final filtered image but also the underlying
 10. Laplacian
 11. Canny Edge Detection
 
-## Technologies
+## Technologies Used
 
-- Python
-- Streamlit
-- OpenCV
-- NumPy
-- Pandas
-- Matplotlib (included as an optional visualization dependency)
-- Custom CSS
+- **Python**
+- **Streamlit** – interactive web interface
+- **OpenCV** – image processing and edge detection
+- **NumPy** – numerical and pixel-level operations
+- **Pandas** – pixel matrix/data handling
+- **Matplotlib** – visualization
 
 ## Project Structure
 
 ```text
-image_filter_app/
+image-processing-filter-lab/
 │
 ├── app.py
 ├── kernels.py
@@ -67,13 +53,30 @@ image_filter_app/
 ├── requirements.txt
 ├── README.md
 │
-└── static/
-    └── custom.css
+├── static/
+│   └── custom.css
+│
+└── output/
+    ├── original_input.png
+    ├── grayscale.png
+    ├── mean_filter.png
+    ├── gaussian_filter.png
+    ├── median_filter.png
+    ├── sobel_x.png
+    ├── sobel_y.png
+    ├── sobel_magnitude.png
+    ├── prewitt_x.png
+    ├── prewitt_y.png
+    ├── roberts_cross.png
+    ├── laplacian.png
+    └── canny_edge_detection.png
 ```
 
 ## Installation
 
-Open a terminal in the project folder.
+Clone or download this repository.
+
+Create and activate a virtual environment:
 
 ```bash
 python -m venv venv
@@ -85,139 +88,112 @@ python -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
 
-If PowerShell blocks script execution for the current session, use:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\venv\Scripts\Activate.ps1
-```
-
-Install dependencies:
+Install the required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run
+## Run the Application
+
+Start the Streamlit application using:
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
-Then open the local Streamlit URL shown in the terminal.
+Then open the local URL displayed in the terminal, usually:
 
-## Example Workflow
+```text
+http://localhost:8501
+```
 
-1. Upload an image.
-2. View its dimensions, channels, and original appearance.
-3. Compare the original image with its grayscale version.
-4. Inspect a selected portion of the grayscale pixel matrix.
-5. Select an operator such as Sobel X.
-6. Inspect the corresponding kernel.
-7. Click **Apply Operator**.
-8. Compare the grayscale input and processed output.
-9. Select an interior pixel.
-10. Open **Step-by-Step Pixel Convolution Demo**.
-11. Inspect the neighborhood, kernel, products, sum, and calculated output.
-12. Download the processed image as PNG or JPG.
+## Application Workflow
 
-## Educational Notes
+```text
+Upload Image
+     ↓
+Preview Image
+     ↓
+Convert to Grayscale
+     ↓
+View Pixel Matrix
+     ↓
+Select Operator
+     ↓
+View Kernel / Algorithm
+     ↓
+Apply Filter
+     ↓
+View Output
+     ↓
+Inspect Pixel / Calculation
+     ↓
+Download Result
+```
+
+## Output Results
+
+The following results were generated using the model image supplied for this project.
+
+### Original Input
+
+![Original Input](output/original_input.png)
+
+### Grayscale
+
+![Grayscale](output/grayscale.png)
 
 ### Mean Filter
 
-Uses:
-
-```text
-1/9 ×
-[ 1 1 1
-  1 1 1
-  1 1 1 ]
-```
-
-It smooths an image by averaging neighboring pixels.
+![Mean Filter](output/mean_filter.png)
 
 ### Gaussian Filter
 
-Uses:
-
-```text
-1/16 ×
-[ 1 2 1
-  2 4 2
-  1 2 1 ]
-```
-
-It performs weighted smoothing.
+![Gaussian Filter](output/gaussian_filter.png)
 
 ### Median Filter
 
-Median filtering is not a normal convolution. It sorts the neighborhood values and selects the middle value.
+![Median Filter](output/median_filter.png)
 
-### Sobel
+### Sobel X
 
-Sobel X and Sobel Y estimate directional gradients. Sobel Magnitude combines them:
+![Sobel X](output/sobel_x.png)
 
-```text
-G = sqrt(Gx² + Gy²)
-```
+### Sobel Y
 
-### Prewitt
+![Sobel Y](output/sobel_y.png)
 
-Prewitt X and Prewitt Y are directional gradient operators with simple 3×3 kernels.
+### Sobel Magnitude
+
+![Sobel Magnitude](output/sobel_magnitude.png)
+
+### Prewitt X
+
+![Prewitt X](output/prewitt_x.png)
+
+### Prewitt Y
+
+![Prewitt Y](output/prewitt_y.png)
 
 ### Roberts Cross
 
-Uses two 2×2 kernels:
-
-```text
-Gx = [ 1  0
-       0 -1 ]
-
-Gy = [ 0  1
-      -1  0 ]
-```
+![Roberts Cross](output/roberts_cross.png)
 
 ### Laplacian
 
-Uses a second-order derivative kernel:
+![Laplacian](output/laplacian.png)
 
-```text
-[ 0 -1  0
- -1  4 -1
-  0 -1  0 ]
-```
+### Canny Edge Detection
 
-### Canny
+![Canny Edge Detection](output/canny_edge_detection.png)
 
-Canny does not have one single standard kernel. It is a multi-stage edge detector:
+## Result
 
-```text
-Gaussian Smoothing
-        ↓
-Gradient Calculation
-        ↓
-Non-Maximum Suppression
-        ↓
-Double Threshold
-        ↓
-Edge Tracking by Hysteresis
-```
+The application provides a visual and interactive way to understand how different spatial-domain image-processing filters affect an image. It combines filter output visualization with kernel information and pixel-level analysis, making it suitable for an academic image-processing laboratory assignment.
 
-## Technical Correctness
+## Author
 
-- Processing starts from grayscale data.
-- Signed gradient responses are calculated in floating point before visualization normalization.
-- Gradient magnitudes are calculated before normalization.
-- Borders are handled with reflected border conditions for kernel operations.
-- Median filtering is treated separately from convolution.
-- Canny is treated as a multi-stage algorithm rather than being assigned a fake kernel.
-- Pixel-level demonstrations use actual pixel values from the uploaded image.
-- Large matrices are limited to configurable visible portions to avoid browser overload.
+**Sharmili**
 
-## Requirements
-
-Recommended Python version: **3.10–3.13**.
-
-## Educational Purpose
-
-This project is suitable for a college Image Processing laboratory, mini-project demonstration, viva, or practical record because it connects the visual output of a filter with the pixel-level mathematical operation that produces it.
+B.Tech Artificial Intelligence and Data Science
