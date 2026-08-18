@@ -134,59 +134,44 @@ Download Result
 
 ## Output Results
 
-The following results were generated using the model image supplied for this project.
-
-### Original Input
-
-![Original Input](output/original_input.png)
+### Original Image
+![Original Image](image_filter_app/image_processing_outputs_my_model/output/original_input.png)
 
 ### Grayscale
-
-![Grayscale](output/grayscale.png)
+![Grayscale](image_filter_app/image_processing_outputs_my_model/output/grayscale.png)
 
 ### Mean Filter
-
-![Mean Filter](output/mean_filter.png)
+![Mean Filter](image_filter_app/image_processing_outputs_my_model/output/mean_filter.png)
 
 ### Gaussian Filter
-
-![Gaussian Filter](output/gaussian_filter.png)
+![Gaussian Filter](image_filter_app/image_processing_outputs_my_model/output/gaussian_filter.png)
 
 ### Median Filter
-
-![Median Filter](output/median_filter.png)
+![Median Filter](image_filter_app/image_processing_outputs_my_model/output/median_filter.png)
 
 ### Sobel X
-
-![Sobel X](output/sobel_x.png)
+![Sobel X](image_filter_app/image_processing_outputs_my_model/output/sobel_x.png)
 
 ### Sobel Y
-
-![Sobel Y](output/sobel_y.png)
+![Sobel Y](image_filter_app/image_processing_outputs_my_model/output/sobel_y.png)
 
 ### Sobel Magnitude
-
-![Sobel Magnitude](output/sobel_magnitude.png)
+![Sobel Magnitude](image_filter_app/image_processing_outputs_my_model/output/sobel_magnitude.png)
 
 ### Prewitt X
-
-![Prewitt X](output/prewitt_x.png)
+![Prewitt X](image_filter_app/image_processing_outputs_my_model/output/prewitt_x.png)
 
 ### Prewitt Y
-
-![Prewitt Y](output/prewitt_y.png)
+![Prewitt Y](image_filter_app/image_processing_outputs_my_model/output/prewitt_y.png)
 
 ### Roberts Cross
-
-![Roberts Cross](output/roberts_cross.png)
+![Roberts Cross](image_filter_app/image_processing_outputs_my_model/output/roberts_cross.png)
 
 ### Laplacian
-
-![Laplacian](output/laplacian.png)
+![Laplacian](image_filter_app/image_processing_outputs_my_model/output/laplacian.png)
 
 ### Canny Edge Detection
-
-![Canny Edge Detection](output/canny_edge_detection.png)
+![Canny Edge Detection](image_filter_app/image_processing_outputs_my_model/output/canny_edge_detection.png)
 
 ## Result
 
