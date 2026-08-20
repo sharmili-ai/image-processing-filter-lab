@@ -4,6 +4,10 @@ An interactive **Image Processing Filter Visualization Lab** developed using **P
 
 This application is designed to demonstrate fundamental image-processing operations in an interactive and easy-to-understand way. Users can upload an image, inspect its pixel values, convert it to grayscale, select different image-processing filters, visualize the corresponding kernels, apply the filters, and compare the processed results.
 
+## 🚀 Live Demo
+
+👉 **[Open the Streamlit App](YOUR_STREAMLIT_APP_LINK)**
+
 ---
 
 ## 📌 Project Overview
