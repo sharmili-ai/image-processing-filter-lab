@@ -6,7 +6,7 @@ This application is designed to demonstrate fundamental image-processing operati
 
 ## 🚀 Live Demo
 
-👉 **[Open the Streamlit App](YOUR_STREAMLIT_APP_LINK)**
+👉 **[Open the Streamlit App](http://localhost:8501/)**
 
 ---
 
